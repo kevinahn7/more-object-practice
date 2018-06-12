@@ -14,41 +14,57 @@
       <h1>Movie Website</h1>
       <h2>Please fill out and submit form for your movie</h2>
     </header>
-    <form class="movieMenu" action="index.html" >
+    <div class="row">
+      <div class="col-md-6">
+        <form class="movieMenu" action="index.html" >
 
-      <div class="form-group">
-        <label for="inputName"> Enter your name:</label>
-        <input type="text"  id="inputName"> </input>
+          <div class="form-group">
+            <label for="inputName"> Enter your name:</label>
+            <input type="text" id="inputName" class="form-control" placeholder="Enter name here" required> </input>
+          </div>
+
+          <div class="form-group">
+            <label for="movieSelection">Choose your movie:</label>
+            <select class="form-control" id="movieSelection">
+              <option value="" selected disabled hidden>Pick your movie</option>
+              <option value="Star Wars 9: Return of Darth Jar Jar Binks">Star Wars 9: Return of Darth Jar Jar Binks</option>
+              <option value="Wedding Crashers: The Documentary">Wedding Crashers: The Documentary</option>
+              <option value="My Little Pony meets Friday the 13th">My Little Pony meets Friday the 13th</option>
+              <option value="Paint drying the film">Paint drying the film</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="timeSelection">Choose your time:</label>
+            <select class="form-control" id="timeSelection">
+              <option value="" selected disabled hidden>Pick your time</option>
+              <option value="4AM">4AM</option>
+              <option value="9AM">9AM</option>
+              <option value="3PM">3PM</option>
+              <option value="11PM">11PM</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="inputAge"> Enter your Age:</label>
+            <input type="text" id="inputAge" class="form-control"  placeholder="Enter age here" required> </input>
+          </div>
+
+          <button type="btn" class="btn btn-success form-control"  id="submitButton" name="button">Enter</button>
+
+        </form>
       </div>
-
-      <div class="form-group">
-        <label for="movieSelection">Choose your movie:</label>
-        <select class="form-control" id="movieSelection">
-          <option value="1">movie 1</option>
-          <option value="2">movie 2</option>
-          <option value="3">movie 3</option>
-          <option value="4">movie 4</option>
-        </select>
+      <div class="col-md-6">
+        <div class="displayResult">
+        </div>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label for="timeSelection">Choose your time:</label>
-        <select class="form-control" id="timeSelection">
-          <option value="1">time 1</option>
-          <option value="2">time 2</option>
-          <option value="3">time 3</option>
-          <option value="4">time 4</option>
-        </select>
-      </div>
+    <div class="col-md-6">
+      <ul class="holdResult">
+      </ul>
+    </div>
 
-      <div class="form-group">
-        <label for="inputAge"> Enter your Age:</label>
-        <input type="text"  id="inputAge"> </input>
-      </div>
-
-      <button type="btn"  id="submitButton" name="button">Enter</button>
-
-    </form>
 
 
   </div>
