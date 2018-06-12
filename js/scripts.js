@@ -33,6 +33,8 @@ function ticketPriceAge(x, amount) {
   return amount
 };
 
+
+
 function ticketPriceMovie(x, amount) {
   if (x.movie === "Wedding Crashers: The Documentary" || x.movie === "Star Wars 9: Return of Darth Jar Jar Binks") {
     amount +=5

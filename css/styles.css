@@ -12,6 +12,8 @@
   min-width: 580px;
   max-width: 638px;
   height: 300px;
+  cursor: pointer;
+  width: 100%;
 }
 
 .holdResult {
@@ -34,4 +36,9 @@
 .picture {
   max-height: 330px;
   width: auto;
+  border-radius: 10%;
+  border: 2px solid gray;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
