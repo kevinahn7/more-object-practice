@@ -1,3 +1,37 @@
+.actualTicket {
+  display: none;
+}
+
+.theTicket {
+  padding: 50px 90px 40px 90px;
+  background-image: url("../img/ticket.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: salmon;
+  margin: 10px 0;
+  min-width: 580px;
+  max-width: 638px;
+  height: 300px;
+}
+
+.holdResult {
+  list-style: none;
+  padding: 10px;
+}
+
 .toRight {
   float: right;
+}
+
+.col-md-8 {
+  padding: 0;
+}
+
+.displayResult {
+  display: none;
+}
+
+.picture {
+  max-height: 330px;
+  width: auto;
 }

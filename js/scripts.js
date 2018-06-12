@@ -7,6 +7,9 @@ function MovieTicket(name,movie,time,age) {
 MovieTicket.prototype.addAgeGroup = function(input) {
   this.ageGroup = ticketAgeToString(input);
 };
+MovieTicket.prototype.addMovieNumber = function(input) {
+  this.movieNumber = ticketMovieNumber(input);
+};
 
 function ticketPrice(input) {
   var price = 0;
@@ -65,6 +68,25 @@ function ticketAgeToString(x) {
   return x
 };
 
+function ticketMovieNumber(x) {
+  if (x.movie === "Star Wars 9: Return of Darth Jar Jar Binks") {
+    x = 1;
+  }
+  else if (x.movie === "Wedding Crashers: The Documentary"){
+    x = 2
+  }
+  if (x.movie === "My Little Pony meets Friday the 13th") {
+    x = 3;
+  }
+  else if (x.movie === "Paint drying the film"){
+    x = 4
+  }
+
+
+  return x;
+}
+
+
 $(document).ready(function(){
    $(".movieMenu").submit(function(e) {
      e.preventDefault();
@@ -74,7 +96,19 @@ $(document).ready(function(){
      var inputtedAge = parseInt($("#inputAge").val());
      var ticket = new MovieTicket(inputtedName, inputtedMovieSelection, inputtedTimeSelection, inputtedAge);
      var finalPrice = ticketPrice(ticket);
-     ticket.addAgeGroup(ticket)
+     ticket.addAgeGroup(ticket);
+     ticket.addMovieNumber(ticket);
+     $(".actualTicket").show();
      $(".holdResult").append("<li class='theTicket'><h2>" + ticket.name + "<span class='toRight'>" + ticket.ageGroup + "</span></h2><h3>" + ticket.movie + "</h3><h3>" + ticket.time + "<span class='toRight'>$" + finalPrice+ "</span></h3></li>");
-   })
+
+     $(".theTicket").last().click(function() {
+       console.log(ticket.movieNumber)
+       $(".displayResult").html("<img class='picture' src=\"img/" + ticket.movieNumber + ".jpg\">")
+       $(".displayResult").show();
+     })
+  })
+
+
+
+
 });
